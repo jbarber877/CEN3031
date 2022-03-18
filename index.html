@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FlashPrep</h1>
+    <h2>Always Prepared</h2>
+
+    <div class = "card">
+        <button id="flash" >Click to Begin</button> 
+    </div>       
+
+    <div class="buttons";>
+        <button id = "homeBtn" type="button"> Home </button>
+        <button id = "prevBtn" type="button"> Previous </button>
+        <button id = "nextBtn" type="button"> Next </button>
+    
+        <div class="radio">
+            <input type="radio" id="rad1" value="radBtn1">
+            <label for="radBtn1">Radio 1</label><br>
+        </div>
+    </div>
+    
+    <script>
+
+        // Items will eventually be replaced with input from the DB, prev and next fucntions may need to be modified
+        let items = ["Title 1", "Text 1", "Title 2", "Text 2", "Title 3", "Text 3"];
+        let indexA = 0;
+        let indexB = 1;
+        
+        const flash = document.getElementById("flash");
+        const prev = document.getElementById("prevBtn");
+        const next = document.getElementById("nextBtn");
+
+        flash.addEventListener("click", function(e){
+            // toggle the title and text of a flashcard from the list
+            flash.textContent = items[indexA];
+            // swap indexA and indexB
+            indexA = [indexB, indexB = indexA][0];
+        });
+
+        prev.addEventListener("click", function(e){
+            // If not at the beginning of the list, return to the previous card
+            if ((indexA + indexB) > 1){
+                indexA -= 2;
+                indexB -= 2;
+            }
+            // Otherwise, go to the last card in the list
+            else {
+                indexA = items.length - 2;
+                indexB = items.length -1;
+            }
+            // Now set the card to display the title of the new card
+            let x = (indexA < indexB ? indexA : indexB);
+            flash.textContent = items[x];
+        });
+
+        next.addEventListener("click", function(e){
+            // If at the end of list, return to first card
+            if (indexA+1 == items.length || indexB+1 == items.length){
+                indexA = 0;
+                indexB = 1;
+            }
+            // Otherwise, advance to next card
+            else {
+                indexA += 2;
+                indexB += 2;
+            }
+            // Now set the card to display the title of the new card
+            let x = (indexA < indexB ? indexA : indexB);
+            flash.textContent = items[x];
+        });
+        
+    </script>
+</body>
+</html>

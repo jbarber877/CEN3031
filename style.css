@@ -1,0 +1,68 @@
+body{
+    overflow:hidden;
+    background-color: dimgrey;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+#homeBtn{
+    background-color: #4c5eaf;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#homeBtn:hover{
+    background-color: #6c67b4;
+}
+
+#prevBtn{
+    background-color: #4c5eaf;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#prevBtn:hover{
+    background-color: #6c67b4;
+}
+
+#nextBtn{
+    background-color: #4c5eaf;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#nextBtn:hover{
+    background-color: #6c67b4;
+}
+
+.radio {
+   padding-top: 25px;
+   float: right; 
+}
+
+#flash{
+   width: 99.9%; 
+   height: 500px;
+   background-color: whitesmoke;
+}
