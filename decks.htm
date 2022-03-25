@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decks</title>
+    <link rel="stylesheet" href="decks.css">
+</head>
+<body>
+    <h1>FlashPrep</h1>
+    <h2>Always Prepared</h2>
+
+    <img src="Logo.JPG" alt = "Logo" class = "logo">
+    
+    <div class="buttons";>
+        <button id = "addBtn" type="button"> Add a Deck </button>
+        <button id = "delBtn" type="button"> Delete a Deck </button>
+        <button id = "upBtn" type="button"> Upload CSV </button>
+    
+    </div>
+
+    <h1>   </h1>
+       
+    <div class="decks">
+        <div class="center">
+        
+        <button id="d1" ></button> 
+        <button id="d2" ></button> 
+        <button id="d3" ></button> 
+        <button id="d4" ></button> 
+        <button id="d5" ></button> 
+        <button id="d6" ></button> 
+        <button id="d7" ></button> 
+        <button id="d8" ></button> 
+        <button id="d9" ></button> 
+        <button id="d10" ></button> 
+        <button id="d11" ></button> 
+        <button id="d12" ></button> 
+
+        </div>
+    </div>       
+    
+    <script>
+
+        // Items will eventually be replaced with input from the DB, prev and next fucntions may need to be modified
+        let items = ["Deck 1", "Deck 2", "Deck 3", "Deck 4", "Deck 5", "Deck 6"];
+        
+        // The buttons list stays as is
+        let buttons = ["d1","d2","d3","d4","d5","d6","d7","d8","d9","d10","d11","d12"];
+
+        for (let i = 0; i < items.length; i++){
+            document.getElementById(buttons[i]).textContent = items[i];            
+        } 
+
+        for (let i = items.length; i < buttons.length; i++){
+            document.getElementById(buttons[i]).style.display = 'none';
+        }
+        
+    </script>
+</body>
+</html>
