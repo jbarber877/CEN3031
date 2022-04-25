@@ -1,4 +1,4 @@
-# README #
+# FlashPrep API Backend README #
 
 ### What is this repository for? ###
 
@@ -22,7 +22,6 @@ This is the back end API for FlashPrep
 ### Run Test
 Running a test is easy.
 1. Run the following command `npm test` 
-
 
 ### Who do I talk to? ###
 
