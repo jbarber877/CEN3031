@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
+## To run the front end web application: 
+
+Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files.
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+# To contribute:
+
 ## Development server
 
 Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files.
